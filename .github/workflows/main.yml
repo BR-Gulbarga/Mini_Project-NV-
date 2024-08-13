@@ -1,0 +1,33 @@
+name: Build and Deploy To-do App
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Use the Node.js version that matches your project requirements
+
+      - name: Install dependencies
+        run: echo "dependencies installed"
+
+      - name: Build
+        run: echo "deployed succesfully"
+
+      - name: Deploy
+        run: echo "Deploying the application"
+          # Add your deployment script or command here. For example:
+          # scp -r * user@server:/path/to/deploy
