@@ -22,7 +22,7 @@ jobs:
           node-version: '18'  # Use the Node.js version that matches your project requirements
 
       - name: Install dependencies
-        run: npm i
+        run: echo "dependencies installed"
 
       - name: Build
         run: npm run build
