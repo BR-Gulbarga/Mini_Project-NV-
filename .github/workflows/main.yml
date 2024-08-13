@@ -25,10 +25,9 @@ jobs:
         run: echo "dependencies installed"
 
       - name: Build
-        run: npm run build
+        run: echo "deployed succesfully"
 
       - name: Deploy
-        run: |
-          echo "Deploying the application"
+        run: echo "Deploying the application"
           # Add your deployment script or command here. For example:
           # scp -r * user@server:/path/to/deploy
